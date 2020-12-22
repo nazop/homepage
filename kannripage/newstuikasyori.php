@@ -67,7 +67,7 @@
 	// 画像の処理
 	// アップロードされたファイルが一時ファイルに入ってるので移動させる
 	$tempfile = $_FILES['gazou']['tmp_name']; // アップロードされたファイルの場所
-	$filename = './gazou/' . $_FILES['gazou']['name']; // 移動先
+	$filename = '../gazou/' . $_FILES['gazou']['name']; // 移動先
 	if(is_uploaded_file($tempfile)){ // ファイルが存在するか確かめる
 		if(move_uploaded_file($tempfile , $filename )) { // 移動させてそれが成功したか確かめる
 			// 成功してたらクエリに突っ込む用に$gazouに入ってる文字列を変換

@@ -74,7 +74,8 @@
 		print '<p class ="newshonnbunn">'.mb_convert_encoding($news[$i]['Honnbunn'], "utf8") . "</p>";
 		print '<br>';
 		if($news[$i]['Gazou'] != null) {
-			print '<img border="0" src="'. $news[$i]['Gazou'] .'" alt="ニュース画像">';
+			$newsGazouName = mb_substr($news[$i]['Gazou'], 1);
+			print '<img border="0" src="'. $newsGazouName .'" alt="ニュース画像">';
 			print "<br><br>";
 		}
 		print "</div>";
